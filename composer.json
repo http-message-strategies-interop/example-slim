@@ -1,0 +1,53 @@
+{
+    "name": "http-message-strategies-interop/example-slim-http-message-strategies",
+    "description": "Slim Example of HTTP Message Strategies PSR",
+    "keywords": [
+        "psr",
+        "psr-7",
+        "http",
+        "http-message",
+        "request",
+        "response",
+        "strategies",
+        "example"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Mayer",
+            "email": "michael@schnittstabil.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Interop\\Http\\Message\\Strategies\\Examples\\Slim\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Interop\\Http\\Message\\Strategies\\Examples\\Slim\\": "tests"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.7",
+        "http-message-strategies-interop/http-message-strategies": "^0.1"
+    },
+    "require-dev": {
+        "schnittstabil/phpunit-starter": "^6.0"
+    },
+    "scripts": {
+        "build": "php ./bin/build.php",
+        "clean": "rm -rf build/ src/* .php_cs.cache",
+        "lint": [
+            "sugared-rim-cs"
+        ],
+        "test": [
+            "@travis",
+            "@lint"
+        ],
+        "travis": [
+            "php index.php",
+            "schnittstabil-phpunit-starter"
+        ]
+    }
+}
