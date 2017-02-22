@@ -28,6 +28,9 @@
             "Interop\\Http\\Message\\Strategies\\Examples\\Slim\\": "tests"
         }
     },
+    "config": {
+        "sort-packages": true
+    },
     "require": {
         "slim/slim": "^3.7",
         "http-message-strategies-interop/http-message-strategies": "^0.1"
