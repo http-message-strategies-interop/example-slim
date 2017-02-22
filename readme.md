@@ -1,4 +1,4 @@
-# Slim Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/example-slim.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/example-slim)
+# Slim Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/example-slim.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/example-slim) [![Coverage Status](https://coveralls.io/repos/github/http-message-strategies-interop/example-slim/badge.svg?branch=master)](https://coveralls.io/github/http-message-strategies-interop/example-slim?branch=master)
 
 ## Usage
 
