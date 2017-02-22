@@ -2,13 +2,20 @@
 
 namespace Interop\Http\Message\Strategies\Examples\Slim;
 
+use Interop\Http\Factory\ResponseFactoryInterface;
 use Interop\Http\Message\Strategies\ServerRequestResponseInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Slim\Http\Response;
 
 class SlimMiddleware implements ServerRequestResponseInterface
 {
+    protected $responseFactory;
+
+    public function __construct(ResponseFactoryInterface $responseFactory)
+    {
+        $this->responseFactory = $responseFactory;
+    }
+
     /**
      * Process a server request and return the produced response.
      *
@@ -20,7 +27,7 @@ class SlimMiddleware implements ServerRequestResponseInterface
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response = null)
     {
         if ($response === null) {
-            $response = new Response();
+            $response = $this->responseFactory->createResponse();
         }
 
         $name = $request->getAttribute('name');
