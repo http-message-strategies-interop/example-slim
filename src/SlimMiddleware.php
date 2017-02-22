@@ -3,11 +3,11 @@
 namespace Interop\Http\Message\Strategies\Examples\Slim;
 
 use Interop\Http\Factory\ResponseFactoryInterface;
-use Interop\Http\Message\Strategies\ServerRequestResponseInterface;
+use Interop\Http\Message\Strategies\ServerRequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-class SlimMiddleware implements ServerRequestResponseInterface
+class SlimMiddleware implements ServerRequestHandlerInterface
 {
     protected $responseFactory;
 

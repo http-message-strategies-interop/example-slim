@@ -3,7 +3,7 @@
 namespace Interop\Http\Message\Strategies\Examples\Slim;
 
 use Interop\Http\Message\Strategies\Examples\Slim\Helpers\ResponseFactory;
-use Interop\Http\Message\Strategies\ServerRequestResponseInterface;
+use Interop\Http\Message\Strategies\ServerRequestHandlerInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
@@ -18,10 +18,10 @@ class SlimMiddlewareTest extends \PHPUnit\Framework\TestCase
         return Request::createFromEnvironment(Environment::mock($envData));
     }
 
-    public function testSlimMiddlewareShouldImplementsServerRequestResponseInterface()
+    public function testSlimMiddlewareShouldImplementsServerRequestHandlerInterface()
     {
         $this->assertInstanceOf(
-            ServerRequestResponseInterface::class,
+            ServerRequestHandlerInterface::class,
             new SlimMiddleware(new ResponseFactory())
         );
     }

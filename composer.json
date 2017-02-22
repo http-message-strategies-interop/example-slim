@@ -33,7 +33,7 @@
     },
     "require": {
         "http-interop/http-factory": "^0.2",
-        "http-message-strategies-interop/http-message-strategies": "^0.1",
+        "http-message-strategies-interop/http-message-strategies": "^0.2",
         "slim/slim": "^3.7"
     },
     "require-dev": {
